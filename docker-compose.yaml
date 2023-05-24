@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: Habits
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data
